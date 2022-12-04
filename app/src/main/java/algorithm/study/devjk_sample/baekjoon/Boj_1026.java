@@ -12,8 +12,10 @@ import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
 /**
- * Sample 백준 제출 시에 class 명은 Main 으로 바꿔서 제출.
- * https://www.acmicpc.net/problem/1026
+ * (Sample) 백준 제출 시에 class 명은 Main 으로 바꿔서 제출.
+ * 플랫폼 : 백준
+ * 문제 : 보물
+ * 링크 : https://www.acmicpc.net/problem/1026
  */
 public class Boj_1026 {
 
