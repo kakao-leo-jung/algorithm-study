@@ -12,10 +12,9 @@ import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
 /**
- * (Sample) 백준 제출 시에 class 명은 Main 으로 바꿔서 제출.
- * 플랫폼 : 백준
- * 문제 : 보물
- * 링크 : https://www.acmicpc.net/problem/1026
+ * 백준 - 보물
+ *
+ * @link https://www.acmicpc.net/problem/1026
  */
 public class Boj_1026 {
 
@@ -39,12 +38,8 @@ public class Boj_1026 {
   }
 
   private int greedy(List<Integer> a, List<Integer> b, int size) {
-    a = a.stream()
-        .sorted(Comparator.reverseOrder())
-        .collect(Collectors.toList());
-    b = b.stream()
-        .sorted()
-        .collect(Collectors.toList());
+    a = a.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+    b = b.stream().sorted().collect(Collectors.toList());
     int sum = 0;
     for (int i = 0; i < size; i++) {
       sum += a.get(i) * b.get(i);
@@ -60,5 +55,4 @@ public class Boj_1026 {
     }
     return list;
   }
-
 }

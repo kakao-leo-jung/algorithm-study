@@ -5,16 +5,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * (Sample) 프로그래머스 제출 시에 main 함수 제외하고 제출
- * 플랫폼 : 프로그래머스
- * 문제 : 억억단을 외우자
- * 링크 : https://school.programmers.co.kr/learn/courses/30/lessons/138475
+ * 프로그래머스 - 억억단을 외우자
+ *
+ * @link https://school.programmers.co.kr/learn/courses/30/lessons/138475
  */
 public class Prg_138475 {
 
   public static void main(String[] args) {
     Prg_138475 sol = new Prg_138475();
-    System.out.println(Arrays.toString(sol.solution(8, new int[]{1, 3, 7}))); // expected [6,6,8]
+    System.out.println(Arrays.toString(sol.solution(8, new int[] {1, 3, 7}))); // expected [6,6,8]
   }
 
   public int[] solution(int e, int[] starts) {
@@ -63,5 +62,4 @@ public class Prg_138475 {
       this.key = key;
     }
   }
-
 }
