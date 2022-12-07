@@ -36,9 +36,11 @@ ex:)
 ```
 
 ### PR 방법 및 브랜치 규칙
-todo
 ```
-PR 단위 - 일주일
+PR 단위 - 일주일 또는 내키는대로.
+
+1. dfjung4254 레포지토리 포크
+2. {your-repository}:{your-custom-branch} -- PR --> {dfjung4254}:{your-branch} // 사전에 브랜치 생성 요청
 ```
 
 
