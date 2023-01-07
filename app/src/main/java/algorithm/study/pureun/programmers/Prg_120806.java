@@ -13,10 +13,10 @@ public class Prg_120806 {
 		System.out.println(ans);
 
 	}
-	
+
 	public int solution(double num1, double num2) {
-        int answer = (int)((num1/num2)*1000);
-        return answer;
-    }
+		int answer = (int) ((num1 / num2) * 1000);
+		return answer;
+	}
 
 }
