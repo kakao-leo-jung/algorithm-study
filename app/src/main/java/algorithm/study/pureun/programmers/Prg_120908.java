@@ -9,7 +9,7 @@ public class Prg_120908 {
 
 	public static void main(String[] args) {
 		Prg_120908 sol = new Prg_120908();
-		int ans = sol.solution("ab6CDE443fgh22iJKlmn1o", "6CD");
+		int ans = sol.solution("ab6CDE443fgknknkh22iJKlmn1o", "6CD");
 		System.out.println(ans);
 
 	}
