@@ -16,7 +16,6 @@ public class Prg_120851 {
 
 	public int solution(String my_string) {
 		int answer = 0;
-		int num = 9;
 		int sum = 0;
 
 		for (int i = 0; i < my_string.length(); i++) {
