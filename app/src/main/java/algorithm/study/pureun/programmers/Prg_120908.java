@@ -16,51 +16,29 @@ public class Prg_120908 {
 
 	public int solution(String str1, String str2) {
 		int answer = 0;
-		
-		if(str1.contains(str2)) {
-			answer = 1;
-		} else {
-			answer = 2;
+		int str2Size = str2.length();
+		int str1Size = str1.length();
+
+		if (str1Size - str2Size < 0) {
+			return answer = 2;
 		}
 
-		return answer;
-	}
-
-	/*public int solution(String str1, String str2) {
-		int answer = 0;
-
-		for (int i = 0; i < str1.length(); i++) {
-			String st1 = str1.substring(0, str2.length());
-
-			if (st1.equals(str2)) {
+		for (int i = 0; i < str1Size - str2Size + 1; i++) {
+			if (str1.substring(i, str2.length() + i).equals(str2)) {
 				answer = 1;
-			} else {
-				char[] ch = str1.toCharArray();
-				mix(ch);
-				str1 = String.valueOf(ch);
+				break;
+			} else if (str1.substring(i, str2.length() + i).equals(str2) == false) {
 				answer = 2;
 			}
 		}
 
 		return answer;
+
 	}
 
-	public char[] mix(char[] source) {
-		char temp = 0;
-		temp = source[0];
-		for (int i = 0; i < source.length - 1; i++) {
-
-			source[i] = source[i + 1];
-			source[source.length - 1] = temp;
-		}
-
-		return source;
-	}
-
-	 * 처음에 짯던 무식한 코드
-	 * 보통 contains 메소드를 사용했다. 
-	 * 혹은 indexof메소드를 사용 위치값으로 알려주는데 위치값을 알려 줄 
-	 * 있다는 것 자체가 존재하고 있다는 이야기이기 때문에 사용가능
-	 */
+// 처음에 짯던 무식한 코드
+// 보통 contains 메소드를 사용했다.
+// 혹은 indexof메소드를 사용 위치값으로 알려주는데 위치값을 알려 줄
+// 있다는 것 자체가 존재하고 있다는 이야기이기 때문에 사용가능
 
 }
