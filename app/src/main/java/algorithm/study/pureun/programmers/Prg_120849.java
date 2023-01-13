@@ -26,8 +26,10 @@ public class Prg_120849 {
 		answer = e;
 		return answer;
 	}
-	/* 아니 위에게 정답이야?
-	 * 
+	/* 아니 위에게 정답이야? 너무 쓸데없이 복잡하게 생각하려하지마
+	 *  answer = my_string.replaceAll("[aeiou]", "");
+	 *  저런식으로도 제거가 되는 듯
+	 *  
 	 * 런타임에러뜸 정답이기는 한듯
 	 * char[] src = new char[] { 'a', 'e', 'i', 'o', 'u' };
 		char[] str = my_string.toCharArray();
