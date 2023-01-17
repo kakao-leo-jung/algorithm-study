@@ -11,7 +11,7 @@ public class Prg_120899 {
 
 	public static void main(String[] args) {
 		Prg_120899 sol = new Prg_120899();
-		int[] num = new int[] {1,8,3};
+		int[] num = new int[] { 1, 8, 3 };
 		int[] ans = sol.solution(num);
 		System.out.println(Arrays.toString(ans));
 
@@ -19,16 +19,16 @@ public class Prg_120899 {
 
 	public int[] solution(int[] array) {
 		int[] answer = new int[2];
-		int index =0;
+		int index = 0;
 		int maxNum = 0;
-		for(int i =0; i < array.length; i++) {
-			
-			if(maxNum < array[i]) {
+		for (int i = 0; i < array.length; i++) {
+
+			if (maxNum < array[i]) {
 				maxNum = array[i];
-				index =i;
+				index = i;
 			}
 		}
-		
+
 		answer[0] = maxNum;
 		answer[1] = index;
 		return answer;
