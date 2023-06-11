@@ -1,9 +1,9 @@
 package algorithm.study.devjk_sample.leetcode;
 
 /**
- * 리트코드 - House Robbe2 ii
+ * 리트코드 - House Robber ii
  *
- * @link https://leetcode.com/problems/house-robber
+ * @link https://leetcode.com/problems/house-robber-ii
  */
 public class Let_213 {
 
