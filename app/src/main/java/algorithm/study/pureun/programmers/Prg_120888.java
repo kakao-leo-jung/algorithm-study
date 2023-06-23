@@ -19,7 +19,7 @@ public class Prg_120888 {
 
       
         
-        return sn;
+        return "";
     }
 
 }
