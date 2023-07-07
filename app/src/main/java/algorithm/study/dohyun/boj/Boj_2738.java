@@ -35,6 +35,4 @@ public class Boj_2738 {
 			System.out.println();
 		}
 
-	}
-
-}
+	}}
