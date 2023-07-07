@@ -37,4 +37,5 @@ public class Boj_2738 {
 
 	}
 
-}
+	                                                                                                   
+}                                                                               
