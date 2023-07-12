@@ -1,5 +1,10 @@
 package algorithm.study.devjk_sample.leetcode
 
+/**
+ * 리트코드 - Guess Number Higher or Lower
+ *
+ * @link https://leetcode.com/problems/guess-number-higher-or-lower
+ */
 class Let_374 : GuessGame() {
 
     override fun guessNumber(n: Int): Int {
