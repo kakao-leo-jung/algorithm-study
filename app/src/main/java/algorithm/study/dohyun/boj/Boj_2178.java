@@ -1,12 +1,7 @@
 package algorithm.study.dohyun.boj;
 import java.io.*;
 import java.util.*;
-class Node{
-    int x, y;
-    Node(int x, int y){
-        this.x = x;
-        this.y = y;
-    }}
+
 public class Boj_2178 {
     static int[] dx = {1,0,-1,0};
     static int[] dy = {0,1,0,-1};
@@ -14,6 +9,14 @@ public class Boj_2178 {
     static int m;
     static int[][] arr;
     static boolean[][] visited;
+    private static class Node{
+        int x;
+        int y;
+        Node(int x,int y){
+            this.x = x;
+            this.y = y;
+        }
+    }
 
     public static void main (String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
