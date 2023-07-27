@@ -29,7 +29,7 @@ public class Boj_2667 {
                 if(!visited[i][j] && arr[i][j] == 1){
                     num = 1;
                     dfs(i,j);
-                    list.add(dfs(i,j));
+                    list.add(num);
                 }
             }
         }
@@ -39,7 +39,7 @@ public class Boj_2667 {
             System.out.println(i);
 
     }
-    public static int dfs(int x, int y){
+    public static void dfs(int x, int y){
         visited[x][y] =true;
         for(int i=0;i<4; i++){
             int nx = dx[i] + x;
@@ -52,6 +52,6 @@ public class Boj_2667 {
                 }
             }
         }
-        return num;
+
     }
 }
