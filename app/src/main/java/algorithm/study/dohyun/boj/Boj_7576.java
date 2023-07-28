@@ -46,7 +46,7 @@ public class Boj_7576 {
                 }
             }
         }
-
+        int max = 0;
         while(! q.isEmpty() ){
             node no = q.poll();
             for(int i=0; i<4; i++){
@@ -60,15 +60,17 @@ public class Boj_7576 {
                 }
             }
 
+            if(max<arr[no.x][no.y])
+                max = arr[no.x][no.y];
+
         }
-        int max = 0;
+
         for(int i=0;i< n; i++){
             for(int j = 0; j< m ; j++){
                 if(arr[i][j] == 0) {
                     System.out.println(-1);
                     return;
                 }
-                max = Math.max(max,arr[i][j]);
             }
         }
         System.out.println(max-1);
