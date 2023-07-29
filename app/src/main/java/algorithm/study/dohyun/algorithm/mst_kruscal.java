@@ -29,7 +29,7 @@ public class mst_kruscal {
         }
         //에지의 가중치 오름차순으로 정렬
         Arrays.sort(graph, (o1,o2) -> o1[2]-o2[2] );
-        kruscal(graph,parent);
+        kruscal();
     }
 
     public static int findset(int x){
@@ -50,7 +50,7 @@ public class mst_kruscal {
             parent[y] = x;
 
     }
-    public static void kruscal(int[][] graph, int[] parent){
+    public static void kruscal(){
         int result=0;
         int edgenum =0;
         for(int i=0; i< graph.length;i++){
