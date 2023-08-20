@@ -13,21 +13,20 @@ class Boj_15649 {
         var arr = IntArray(m)
         var visited = BooleanArray(n + 1)
 
-        combination(1, 0, n, m, arr, visited)
-
+        combination(0, n, m, arr, visited)
     }
 
-    fun combination(cur: Int, curIndex: Int, n: Int, m: Int, arr: IntArray, visited: BooleanArray) {
-        if(curIndex == m) {
+    fun combination(cur: Int, n: Int, m: Int, arr: IntArray, visited: BooleanArray) {
+        if (cur == m) {
             println(arr.joinToString(" "))
             return
         }
 
-        for(i in 1..n) {
-            if(visited[i]) continue
+        for (i in 1..n) {
+            if (visited[i]) continue
             visited[i] = true
-            arr[curIndex] = i
-            combination(cur + 1, curIndex + 1, n, m, arr, visited)
+            arr[cur] = i
+            combination(cur + 1, n, m, arr, visited)
             visited[i] = false
         }
     }
