@@ -16,26 +16,31 @@ public class Prg_12909 {
         boolean answer3 = sol.solution(s3);
         System.out.println(answer3);
 
+        String s4 = "())";
+        boolean answer4 = sol.solution(s4);
+        System.out.println(answer4);
+
     }
 
     public boolean solution(String s){
 
         boolean answer = true;
 
-        Queue<String> q = new LinkedList<>();
+        Queue<Character> q = new LinkedList<>();
 
-        if(s.charAt(0) == ')')
-            return false;
 
-        for(int i=0; i<s.length(); i++){
-            if(s.charAt(i)==('('))
-                q.offer("(");
+        for(int i=0; i < s.length()  ; i++){
+            if (s.charAt(i) == '(' )
+                q.offer(s.charAt(i));
+            else if( s.charAt(i) == ')' ){
+                if( !q.isEmpty() && q.peek() == '(' )
+                    q.poll();
+                else
+                    return false;
 
-            if(s.charAt(i) == (')'))
-                q.poll();
+            }
 
         }
-
         if(!q.isEmpty())
             answer = false;
 

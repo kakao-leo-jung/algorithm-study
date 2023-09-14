@@ -6,40 +6,47 @@ public class Boj_4949 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in) );
+        StringBuilder sb = new StringBuilder();
         while(true){
             String str = br.readLine();
-            Stack<String> stk = new Stack<>();
+            if(str.charAt(0) == '.')    break; // 마지막 문장이면 아웃s
 
-            if(str.charAt(0) == '.')    break; // 마지막 문장이면 아웃
+            sb.append(solution(str)).append("\n");
 
-            str = str.replace(" ","");
+        }
+        System.out.println(sb);
+    }
+    private static String solution(String str){
 
+        Stack<Character> stk = new Stack<>();
 
-            for(int i=0; i< str.length() ; i++){
-                char tmp = str.charAt(i);
+        str = str.replace(" ","");
+        for(int i=0; i< str.length() ; i++){
 
-                if(tmp == '[') stk.push(Character.toString(tmp));
-                else if(tmp == '(') stk.push(Character.toString(tmp));
-                else if(tmp == ')'){
-                    if( stk.isEmpty() )
-                        stk.push(Character.toString(tmp));
-                    else if(stk.peek().equals("("))  stk.pop();
-                    else stk.push(Character.toString(tmp));
+            char tmp = str.charAt(i);
+
+            if( tmp == '[' || tmp =='(')
+                stk.push(tmp);
+
+            if(tmp == ')' ) {
+                if( stk.isEmpty()  || stk.peek() != '(') {
+                    return "no";
                 }
-                else if(tmp == ']'){
-                    if( stk.isEmpty() )
-                        stk.push(Character.toString(tmp));
-                    else if(stk.peek().equals("["))  stk.pop();
-                    else stk.push(Character.toString(tmp));
-                }
+                else stk.pop();
             }
-            if( stk.isEmpty() ) System.out.println("yes");
-            else System.out.println("no");
 
+
+            if(tmp == ']') {
+                if( stk.isEmpty() || stk.peek() !='[' ) {
+                    return "no";
+                }
+                else stk.pop();
+            }
 
         }
 
-
+        if( stk.isEmpty() ) return "yes";
+        else    return "no";
 
     }
 }
